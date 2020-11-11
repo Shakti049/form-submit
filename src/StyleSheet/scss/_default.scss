@@ -1,0 +1,18 @@
+@import "variable";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.font-bold {
+    font-family: $Roboto_Bold;
+}
+
+.font-medium {
+    font-family: $Roboto_Medium;
+}
+
+.font-regular {
+    font-family: $Roboto_Regular;
+}

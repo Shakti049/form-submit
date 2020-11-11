@@ -1,0 +1,42 @@
+/*------------------------------------color codes-------------------------------------*/
+$Primary_Color1: whitesmoke;
+$Primary_Color2: white;
+/*------------------------------------color codes-------------------------------------*/
+
+
+
+/*------------------------Font used ( Roboto from google )----------------------------*/
+// import and declaration of Roboto fonts
+@font-face {
+    font-family: "Roboto, bolder";
+    src: url("../../Assets/Font/Roboto/Roboto-Black.ttf")
+}
+
+@font-face {
+    font-family: "Roboto, bold";
+    src: url("../../Assets/Font/Roboto/Roboto-Bold.ttf")
+}
+
+@font-face {
+    font-family: "Roboto, medium";
+    src: url("../../Assets/Font/Roboto/Roboto-Medium.ttf")
+}
+
+@font-face {
+    font-family: "Roboto, regular";
+    src: url("../../Assets/Font/Roboto/Roboto-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Roboto, lighter";
+    src: url("../../Assets/Font/Roboto/Roboto-Light.ttf")
+}
+
+
+// font variables
+$Roboto_Bolder: "Roboto, bolder";
+$Roboto_Bold: "Roboto, bold";
+$Roboto_Medium: "Roboto, medium";
+$Roboto_Regular: "Roboto, regular";
+$Roboto_Lighter: "Roboto, lighter";
+/*------------------------Font used ( Roboto from google )----------------------------*/

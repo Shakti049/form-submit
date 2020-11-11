@@ -1,0 +1,268 @@
+/*------------------------------------color codes-------------------------------------*/
+/*------------------------------------color codes-------------------------------------*/
+/*------------------------Font used ( Roboto from google )----------------------------*/
+@font-face {
+  font-family: "Roboto, bolder";
+  src: url("../../Assets/Font/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, bold";
+  src: url("../../Assets/Font/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, medium";
+  src: url("../../Assets/Font/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, regular";
+  src: url("../../Assets/Font/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, lighter";
+  src: url("../../Assets/Font/Roboto/Roboto-Light.ttf");
+}
+
+/*------------------------Font used ( Roboto from google )----------------------------*/
+/*------------------------------------color codes-------------------------------------*/
+/*------------------------------------color codes-------------------------------------*/
+/*------------------------Font used ( Roboto from google )----------------------------*/
+@font-face {
+  font-family: "Roboto, bolder";
+  src: url("../../Assets/Font/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, bold";
+  src: url("../../Assets/Font/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, medium";
+  src: url("../../Assets/Font/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, regular";
+  src: url("../../Assets/Font/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto, lighter";
+  src: url("../../Assets/Font/Roboto/Roboto-Light.ttf");
+}
+
+/*------------------------Font used ( Roboto from google )----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.font-bold {
+  font-family: "Roboto, bold";
+}
+
+.font-medium {
+  font-family: "Roboto, medium";
+}
+
+.font-regular {
+  font-family: "Roboto, regular";
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/*---------------------------------------------header-section--------------------------------------------------------*/
+.bg-color {
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 5px 1px #0000007d;
+          box-shadow: 0px 1px 5px 1px #0000007d;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.bg-color .heading {
+  font-size: 20px;
+  font-family: "Roboto, medium";
+}
+
+.bg-color .form-button {
+  font-family: "Roboto, regular";
+  cursor: pointer;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bg-color .heading {
+    font-size: 16px;
+  }
+  .bg-color .form-button {
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bg-color .heading {
+    font-size: 16px;
+  }
+  .bg-color .form-button {
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+/*---------------------------------------------header-section--------------------------------------------------------*/
+/*---------------------------------------------form-section--------------------------------------------------------*/
+.form-body {
+  margin: 0vw 20vw;
+  background-color: white;
+}
+
+.form-body .input-form-class {
+  margin-bottom: 2vw;
+}
+
+.form-body .input-form-class .event-datalist {
+  border: none;
+  border-bottom: 3px solid black;
+}
+
+.form-body .input-form-class .event-datalist:focus {
+  outline: none;
+}
+
+.form-body .input-form-class .max-character {
+  color: grey;
+}
+
+.form-body .input-form-class .textarea-input:focus {
+  outline: none;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form-container .form-body {
+    margin: 0vw 10vw;
+  }
+  .form-container .form-body .input-form-class, .form-container .form-body .attachment {
+    font-size: 12px;
+  }
+  .form-container .form-body .input-form-class .event-datalist, .form-container .form-body .attachment .event-datalist {
+    border-bottom: 2px solid black;
+  }
+  .form-container .form-body .input-form-class .max-character, .form-container .form-body .attachment .max-character {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .form-container .form-body {
+    margin: 0vw 4vw;
+  }
+  .form-container .form-body .input-form-class, .form-container .form-body .attachment {
+    font-size: 12px;
+  }
+  .form-container .form-body .input-form-class .event-datalist, .form-container .form-body .attachment .event-datalist {
+    border-bottom: 1px solid black;
+  }
+  .form-container .form-body .input-form-class .max-character, .form-container .form-body .attachment .max-character {
+    font-size: 10px;
+  }
+}
+
+.toggle-switch {
+  background-color: grey;
+  height: 10px;
+  width: 30px;
+  border-radius: 3px;
+}
+
+.toggle-switch .circle {
+  margin-top: -2.5px;
+  margin-left: -3px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.toggle-switch .transform-class {
+  -webkit-transform: translateX(19px);
+          transform: translateX(19px);
+}
+
+/*---------------------------------------------form-section--------------------------------------------------------*/
+/*---------------------------------------------snack-bar--------------------------------------------------------*/
+.snackbar {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 20px;
+  margin-left: auto;
+  right: 30px;
+  color: white;
+  background-color: #f44336;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.snackbar .attention {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 25px;
+}
+
+.snackbar .xcross {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 20px;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .snackbar .attention {
+    width: 20px;
+  }
+  .snackbar .xcross {
+    width: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .snackbar .attention {
+    width: 20px;
+  }
+  .snackbar .xcross {
+    width: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .snackbar {
+    width: 280px;
+    font-size: 12px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .snackbar {
+    right: 10px;
+    width: 280px;
+    font-size: 12px;
+    height: 35px;
+  }
+}
+
+/*---------------------------------------------snack-bar--------------------------------------------------------*/
+/*# sourceMappingURL=main.css.map */
