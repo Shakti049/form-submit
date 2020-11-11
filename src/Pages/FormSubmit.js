@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+// connect
+import { connect } from "react-redux";
+
+// action import
+import { createEvent } from '../Redux/action.js';
+
 // Dummy data imports
 import { eventType, categoryType } from '../Fixtures/dummyData.js';
 
@@ -13,6 +19,7 @@ import UploadData from "../Components/UploadInput";
 // CSS style sheet import
 import "../StyleSheet/css/main.css";
 import SnackBar from '../Components/Snackbar/index.js';
+import Model from '../Components/Model/index.js';
 
 class FormSubmit extends Component {
     state = {
@@ -23,14 +30,15 @@ class FormSubmit extends Component {
         toggle: false,
         onlineLink: "",
         uploadedFile: [],
-        snackBar: false
+        snackBar: false,
+        model: false,
     };
 
     handleInput = (event) => {
         const { name, value, files, type } = event.target;
         this.setState({
             [name]: type !== "file" ? value : files,
-        }, () => console.log(name, this.state[name], value));
+        });
     };
 
     handleToggle = () => {
@@ -38,7 +46,7 @@ class FormSubmit extends Component {
 
         this.setState({
             toggle: !toggle,
-        }, () => console.log("input-form", this.state.toggle));
+        });
     };
 
     closeSnackBar = (state) => {
@@ -48,13 +56,21 @@ class FormSubmit extends Component {
     };
 
     createEvent = () => {
-        if (( this.state.eventName && this.state.eventTitle && this.state.categoryName ) === ""
+        const { dispatch } = this.props;
+        if ((this.state.eventName && this.state.eventTitle && this.state.categoryName) === ""
             || (Array.isArray(this.state.uploadedFile) && this.state.uploadedFile.length === 0)
         ) {
             this.closeSnackBar(true);
         } else {
-            alert("From Successfully Uploaded");
+            dispatch(createEvent(this.state));
+            this.model(true);
         }
+    };
+
+    model = (value) => {
+        this.setState({
+            model: value,
+        }, () => !value && window.location.reload());
     };
 
     render() {
@@ -67,7 +83,10 @@ class FormSubmit extends Component {
             onlineLink,
             snackBar,
             uploadedFile,
+            model,
         } = this.state;
+
+        const { formData } = this.props;
 
         if (snackBar) {
             setTimeout(() => {
@@ -137,9 +156,23 @@ class FormSubmit extends Component {
                     snackBar={snackBar}
                     closeSnackBar={this.closeSnackBar}
                 />
+
+                { model
+                    && <Model
+                        data={formData}
+                        model={this.model}
+                    /> 
+                }
             </div>
         );
     }
 }
 
-export default FormSubmit;
+
+const mapStateToProps = state => {
+    return {
+        formData: state.eventReducer,
+    };
+};
+
+export default connect(mapStateToProps)(FormSubmit);

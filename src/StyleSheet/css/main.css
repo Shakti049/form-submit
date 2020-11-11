@@ -85,6 +85,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  position: relative;
 }
 
 .bg-color .heading {
@@ -265,4 +266,72 @@ body {
 }
 
 /*---------------------------------------------snack-bar--------------------------------------------------------*/
+/*---------------------------------------------model--------------------------------------------------------*/
+.model-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.685);
+}
+
+.model-container .model-card {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  margin-top: 100px;
+  height: 240px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.model-container .model-card .data-info-heading {
+  font-size: 20px;
+}
+
+.model-container .model-card .close-model {
+  width: 20px;
+}
+
+.model-container .model-card .data-info {
+  color: grey;
+  display: block;
+}
+
+.model-container .model-card .data-title {
+  color: black;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .model-container .model-card {
+    height: 190px;
+  }
+  .model-container .model-card .data-info-heading {
+    font-size: 16px;
+  }
+  .model-container .model-card .data-info {
+    font-size: 12px;
+  }
+  .model-container .model-card .close-model {
+    width: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .model-container .model-card {
+    height: 190px;
+  }
+  .model-container .model-card .data-info-heading {
+    font-size: 16px;
+  }
+  .model-container .model-card .data-info {
+    font-size: 12px;
+  }
+  .model-container .model-card .close-model {
+    width: 16px;
+  }
+}
+
+/*---------------------------------------------model--------------------------------------------------------*/
 /*# sourceMappingURL=main.css.map */
