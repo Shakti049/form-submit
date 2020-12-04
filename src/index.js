@@ -8,7 +8,7 @@ import { createStore } from "redux";
 import "bootstrap/dist/css/bootstrap.css";
 
 // FormSubmit component import
-import FormSubmit from './Pages/FormSubmit';
+import Routing from './Routing/Routing';
 
 // redux action import
 import { allReducers } from './Redux/combine';
@@ -19,7 +19,7 @@ const store = createStore(allReducers);
 
 ReactDOM.render(
     <Provider store={store}>
-        <FormSubmit />
+        <Routing />
     </Provider>,
     document.getElementById('root')
 );

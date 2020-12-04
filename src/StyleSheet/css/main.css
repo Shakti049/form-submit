@@ -301,6 +301,7 @@ body {
 
 .model-container .model-card .data-title {
   color: black;
+  width: 150px;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -334,4 +335,16 @@ body {
 }
 
 /*---------------------------------------------model--------------------------------------------------------*/
+/*---------------------------------------------Result--------------------------------------------------------*/
+.result-body .heading {
+  font-size: 20px;
+  font-family: "Roboto, medium";
+}
+
+.result-body .data-title {
+  color: black;
+  min-width: 150px;
+}
+
+/*---------------------------------------------Result--------------------------------------------------------*/
 /*# sourceMappingURL=main.css.map */

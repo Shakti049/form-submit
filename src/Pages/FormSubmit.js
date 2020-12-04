@@ -32,6 +32,8 @@ class FormSubmit extends Component {
         uploadedFile: [],
         snackBar: false,
         model: false,
+        edit: false,
+        isResultPage: false
     };
 
     handleInput = (event) => {
@@ -63,7 +65,8 @@ class FormSubmit extends Component {
             this.closeSnackBar(true);
         } else {
             dispatch(createEvent(this.state));
-            this.model(true);
+            // this.model(true);
+            this.props.history.push('/Result');
         }
     };
 
@@ -71,6 +74,20 @@ class FormSubmit extends Component {
         this.setState({
             model: value,
         }, () => !value && window.location.reload());
+    };
+
+    isEditTable = () => {
+        const { formData, dispatch } = this.props;
+        this.setState({
+            eventName: formData.eventName,
+            eventTitle: formData.eventTitle,
+            categoryName: formData.categoryName,
+            eventDescription: formData.eventDescription,
+            toggle: formData.toggle,
+            onlineLink: formData.onlineLink,
+            uploadedFile: [],
+            edit: false,
+        }, () => dispatch(createEvent(this.state)));
     };
 
     render() {
@@ -92,6 +109,12 @@ class FormSubmit extends Component {
             setTimeout(() => {
                 this.closeSnackBar();
             }, 1500);
+        }
+
+        if (formData.edit) {
+            setTimeout(() => {
+                this.isEditTable()
+            }, 500);
         }
 
         return (

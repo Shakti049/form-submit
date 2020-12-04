@@ -4,7 +4,6 @@ class UploadData extends Component {
     
     render() {
         const { name } = this.props;
-
         return (
             <div className="attachment">
                 <label>Attachment *</label>
